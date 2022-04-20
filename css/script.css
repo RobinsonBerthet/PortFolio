@@ -1,0 +1,303 @@
+*{
+	box-sizing: border-box;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position:center center;
+	background-size: cover;
+	font-family: Consolas, monaco, monospace;
+}
+.navbar
+{
+	display: flex;
+	align-items: center;
+	background: black;
+	color: white;
+	text-align: left;
+}
+
+.titre
+{
+	font-size: 1.5rem;
+	margin: .5rem;
+	margin-right: 50px;
+
+}
+.navbar-links ul
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+
+}
+
+.navbar-links li
+{
+	list-style: none;
+	font-size: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.navbar-links li a
+{
+	text-decoration: none;
+	padding: 1rem;
+	display: block;
+	color: white;
+}
+
+.navbar-links li:hover
+{
+	background-color: rgba(120,120,150, 0.8);
+}
+.navbarFin
+{
+	display: flex;
+	align-items: center;
+	background: black;
+	color: white;
+	justify-content: center;
+}
+.navbar-linksFin ul
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+.navbar-linksFin li
+{
+	list-style: none;
+	font-size: 15px;
+}
+.navbar-linksFin li a
+{
+	text-decoration: none;
+	padding: 1rem;
+	display: block;
+	color: white;
+}
+.navbar-linksFin a:hover
+{
+	color: blue;
+}
+/*Menu hamburger*/
+.toggle-button
+{
+	position: absolute;
+	top: 1.2rem;
+	right: 1rem;
+ 	display: none;
+ 	justify-content: center;
+ 	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 40px;
+	height: 35px;
+	cursor: pointer;
+	transition: all .5s ease-in-out;
+}
+
+.btnMenu
+{
+	width: 30px;
+	height: 4px;
+	background: white;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+}
+.btnMenu::before,
+.btnMenu::after
+{
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 4px;
+	background: white;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+}
+.btnMenu::before
+{
+	transform: translateY(-10px);
+}
+.btnMenu:after
+{
+	transform: translateY(10px);
+}
+/*Menu hamburger*/
+hr
+{
+	width: 50%;
+	border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+.page
+{
+	margin: auto; 
+	background-color: rgb(240, 240, 240);
+	border-radius: 2px;
+	width: 80%;
+}
+.profil
+{
+	font-size: 0.8em;
+	display: flex;
+	align-items: center;
+}
+
+.descProfil
+{
+	margin-left: 10px;
+	width: 40%;
+	font-size: 1.2em;
+	line-height: 1.8em;
+	letter-spacing: 0.1em;
+	text-align: left;
+	margin-right: auto;
+}
+.imgMoi
+{
+	max-width: 250px;
+	max-height: 400px;
+	border: 5px outset rgb(50,50,50);
+	padding: 5px;
+	margin-left: auto;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.titreComp
+{
+	text-align: center;
+}
+.imgDev
+{
+	max-width: 300px;
+	max-height: 200px;
+	float: left;
+	margin: 30px;
+}
+.paraComp
+{
+	width: 100%;
+	font-size: 1em;
+	line-height: 1.8em;
+	letter-spacing: 0.1em;
+}
+.paraProjets
+{
+	width: 60%;
+}
+
+@media (max-width: 1050px)
+{
+	.descProfil
+	{
+		width: 100%;
+		margin: 0;
+	}
+}
+@media (max-width: 800px)
+{
+	.toggle-button
+	{
+		display: flex;
+	}
+	.toggle-button.active .btnMenu
+	{
+		transform: translateX(-50px);
+		background: transparent;
+	}
+	.toggle-button.active .btnMenu::before
+	{
+		transform: rotate(45deg) translate(35px, -35px);
+	}
+	.toggle-button.active .btnMenu::after
+	{
+		transform: rotate(-45deg) translate(35px, 35px);
+	}
+	.navbar-links
+	{
+		display: none;
+		width: 100%;
+	}
+	.navbar
+	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.navbar-links ul
+	{
+		width: 50%;
+		flex-direction: column;
+		z-index: 6;
+		position: absolute;
+		background:  linear-gradient(to right, rgba(10, 10, 25, 0.8), rgba(120,120,120, 0.3));
+	}
+	.navbar-links li
+	{
+		text-align: center;
+		position: left;
+	}
+	.navbar-links li a
+	{
+		padding: .5rem 1rem;
+	}
+	.navbar-links.active
+	{
+		display: flex;
+		width: 30%;
+	}
+
+	.navbar-links.active.opened
+	{
+		display: none;
+	}
+	.paraProjets
+	{
+		width: 100%;
+	}
+	
+	.descProfil
+	{
+		width: 100%;
+	}
+	.imgMoi
+	{
+		margin: auto;
+		display: flex;
+		max-width: 250px;
+		max-height: 350px;
+	}
+	.profil
+	{
+		align-items: unset;
+		display: inline-block;
+	}
+	.imgDev
+	{
+		float: none;
+	}
+
+}
+@media (max-width: 550px)
+{
+	.page
+	{
+		width: 95%;
+	}
+	.imgDev
+	{
+		float: none;
+		display:flex;
+		margin: auto;
+		margin-top: 5px;
+	}
+}
