@@ -104,19 +104,20 @@ body
 
 .btnMenu
 {
-	width: 30px;
-	height: 4px;
+	width: 50px;
+	height: 6px;
 	background: white;
 	border-radius: 5px;
 	transition: all .5s ease-in-out;
+	margin-top: 10px;
 }
 .btnMenu::before,
 .btnMenu::after
 {
 	content: '';
 	position: absolute;
-	width: 30px;
-	height: 4px;
+	width: 50px;
+	height: 6px;
 	background: white;
 	border-radius: 5px;
 	transition: all .5s ease-in-out;
@@ -203,8 +204,12 @@ hr
 		margin: 0;
 	}
 }
-@media (max-width: 1000px)
+@media (max-width: 1024px)
 {
+	.navbar
+	{
+		height: 75px;
+	}
 	.toggle-button
 	{
 		display: flex;
@@ -285,9 +290,14 @@ hr
 	{
 		float: none;
 	}
+	.titre
+	{
+		font-size: 2em;
+		margin-top: 20px;
+	}
 
 }
-@media (max-width: 550px)
+@media (max-width: 600px)
 {
 	.page
 	{
