@@ -208,7 +208,7 @@ hr
 {
 	.navbar
 	{
-		height: 125px;
+		height: 75px;
 	}
 	.toggle-button
 	{
@@ -240,7 +240,7 @@ hr
 
 	.navbar-links ul
 	{
-		width: 50%;
+		width: 100%;
 		flex-direction: column;
 		z-index: 6;
 		position: absolute;
@@ -293,7 +293,7 @@ hr
 	.titre
 	{
 		font-size: 2em;
-		margin-top: 40px;
+		margin-top: 20px;
 	}
 
 }
