@@ -6,24 +6,27 @@
 		<script src="js/script.js" defer></script>
 		<title>PortFolio</title>
 	</head>
-	<body class="body">
-		<!--menu-->
-		<nav id="accueil" class="navbar">
-			<div class="titre">Mon PortFolio</div>
-			<div class="toggle-button">
-				<div class="btnMenu"></div>
-			</div>
-			<div class="navbar-links">
-				<ul>
-					<li><a href="#accueil">Accueil</a></li>
-					<li><a href="#aPropos">A propos</a></li>
-					<li><a href="#competences">Mes compétences</a></li>
-					<li><a href="#projets">Mes Projets</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
-		<!--finMenu-->
+	<body id="body">
+		<header id="header">
+			<!--menu-->
+			<nav id="accueil" class="navbar">
+				<div class="titre">Mon PortFolio</div>
+				<div class="toggle-button">
+					<div class="btnMenu"></div>
+				</div>
+				<div class="navbar-links">
+					<ul>
+						<li><a href="#accueil">Accueil</a></li>
+						<li><a href="#aPropos">A propos</a></li>
+						<li><a href="#competences">Mes compétences</a></li>
+						<li><a href="#projets">Mes Projets</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!--finMenu-->
+		</header>
+
 		<!--A propos-->
 		<hr>
 		<table class="page">
@@ -49,9 +52,11 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="celluleParaComp">
 					<img alt="imgDev" class="imgDev" src="img/img-dev.jpg">
-					<p class="paraComp">Je suis Spécialisé dans le développement web ou je dispose des bases dans plusieurs langages comme le HTML le CSS, le JavaScript en front-end ou encore le php en back-end. J'ai aussi appris les bases de la programmation orientée objet en C# et aussi appris le sql pour la gestion des données.De plus j'ai appris à utiliser le framework Bootstrap, j'ai aussi utilisé WordPress</p>
+					<p class="paraComp">
+					Je suis Spécialisé dans le développement web ou je dispose des bases dans plusieurs langages comme le HTML le CSS, le JavaScript en front-end ou encore le php en back-end. J'ai aussi appris les bases de la programmation orientée objet en C# et aussi appris le sql pour la gestion des données.De plus j'ai appris à utiliser le framework Bootstrap, j'ai aussi utilisé WordPress.
+					</p>
 				</td>
 			</tr>
 		</table>
@@ -60,9 +65,38 @@
 		<!--Projets-->
 		<table id="projets" class="page">
 			<tr>
-				<td>
+				<td class="titreProjets">
 					<h1>Mes Projets</h1>
-					<p class="paraProjets">J'ai réalisé différents Porjets notamment, un formulaire pour la réalisation d'un inventaire en html css et javascript</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="paraProjets">Formulaire pour la réalisation d'un inventaire en html css et javascript</p>
+					<button id="btnPopup" class="btnPopup">cliquer ici pour en savoir plus</button>
+					<div id="overlay" class="overlay">
+						<div id="popup" class="popup">
+							<h2 class="titreForm">
+								Formulaire en HTML CSS et JavaScript
+								<span id="btnClose" class="btnClose">&times;</span>
+							</h2>
+							<p>Ce formulaire est un formulaire qui est utilisé pour remplir un inventaire par exemple ou il y a différents types de Champs notamment la ou il faut remplir son nom ou son prénom mais aussi des champs de type radiobutton ou on choisi entre une des deux options ou encore des listes déroulantes. Le code javascript permet alors de vérifier et d'avertir si les champs sont valides et non vides en affichant des messages. 
+							</p>
+							<img class="imgForm" src="img/img-form.png">
+						</div>
+					</div>
+					<p class="paraProjets">création d'un jeu pendu en C# avec une lite de mots définie</p>
+					<button id="btnPopup" class="btnPopup">cliquer ici pour en savoir plus</button>
+					<div id="overlay" class="overlay">
+						<div id="popup" class="popup">
+							<h2>
+								Jeu pendu en C#
+								<span id="btnClose" class="btnClose">&times;</span>
+							</h2>
+							<p>
+							</p>
+							<img class="imgForm" src="img/">
+						</div>
+					</div>
 				</td>
 			</tr>
 		</table>
