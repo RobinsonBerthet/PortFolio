@@ -10,6 +10,7 @@ body
 	background-position:center center;
 	background-size: cover;
 	font-family: Consolas, monaco, monospace;
+	
 }
 .navbar
 {
@@ -96,32 +97,44 @@ body
  	align-items: center;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 40px;
-	height: 35px;
+	width: 60px;
+	height: 30px;
 	cursor: pointer;
 	transition: all .5s ease-in-out;
+	margin-top: 40px;
 }
 
 .btnMenu
 {
-	width: 50px;
-	height: 6px;
+	width: 60px;
+	height: 7px;
 	background: white;
 	border-radius: 5px;
 	transition: all .5s ease-in-out;
-	margin-top: 10px;
+
 }
-.btnMenu::before,
+
 .btnMenu::after
 {
 	content: '';
 	position: absolute;
-	width: 50px;
-	height: 6px;
+	width: 60px;
+	height: 7px;
 	background: white;
 	border-radius: 5px;
 	transition: all .5s ease-in-out;
 }
+.btnMenu::before
+{
+	content: '';
+	position: absolute;
+	width: 60px;
+	height: 7px;
+	background: white;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+}
+
 .btnMenu::before
 {
 	transform: translateY(-10px);
@@ -155,7 +168,7 @@ hr
 .descProfil
 {
 	margin-left: 10px;
-	width: 40%;
+	width: 50%;
 	font-size: 1.2em;
 	line-height: 1.8em;
 	letter-spacing: 0.1em;
@@ -164,8 +177,8 @@ hr
 }
 .imgMoi
 {
-	max-width: 250px;
-	max-height: 400px;
+	max-width: 200px;
+	max-height: 350px;
 	border: 5px outset rgb(50,50,50);
 	padding: 5px;
 	margin-left: auto;
@@ -177,25 +190,91 @@ hr
 {
 	text-align: center;
 }
+.celluleParaComp
+{
+	display: flex;
+	align-items: center;
+}
 .imgDev
 {
 	max-width: 300px;
 	max-height: 200px;
-	float: left;
-	margin: 30px;
+	margin-left: auto;
+	margin-right: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .paraComp
 {
-	width: 100%;
+	width: 60%;
 	font-size: 1em;
 	line-height: 1.8em;
 	letter-spacing: 0.1em;
+	text-align: left;
+	margin-right: auto;
+}
+.titreProjets
+{
+	text-align: center;
 }
 .paraProjets
 {
-	width: 60%;
+	width: 30%;
 }
-
+.btnPopup
+{
+	background-color: rgb(175, 175, 255);
+	padding: 15px;
+	cursor: pointer;
+	border-radius: 10px;
+	border: 0px;
+	margin: auto;
+}
+.btnPopup:hover
+{
+	background-color: white;
+	border: 1px solid blue;
+}
+.overlay
+{
+	background-color: rgba(200, 200, 200, 0.5);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	
+}
+.popup
+{
+	margin: 20% auto;
+	width: 60%;
+	height: 90%;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.3);
+	padding: 1em;
+	transform:translate(0%,-45%);
+	overflow-y: scroll;
+}
+.titreForm
+{
+	text-align: center;
+}
+.btnClose
+{
+	float: right;
+	cursor: pointer;
+}
+.imgForm
+{
+	width: 65%;
+	display: block;
+	margin: auto;
+}
 @media (max-width: 1050px)
 {
 	.descProfil
@@ -206,9 +285,14 @@ hr
 }
 @media (max-width: 1024px)
 {
+	.titre
+	{
+		font-size: 2em;
+		margin-top: 40px;
+	}
 	.navbar
 	{
-		height: 75px;
+		height: 125px;
 	}
 	.toggle-button
 	{
@@ -286,15 +370,23 @@ hr
 		align-items: unset;
 		display: inline-block;
 	}
+	.celluleParaComp
+	{
+		display: inline-block;
+		align-items: unset;
+	}
 	.imgDev
 	{
-		float: none;
+		max-width: 300px;
+		max-height: 200px;
+		margin: auto;
+		display: flex;
 	}
-	.titre
+	.paraComp
 	{
-		font-size: 2em;
-		margin-top: 20px;
+		width: 100%;
 	}
+
 
 }
 @media (max-width: 600px)
