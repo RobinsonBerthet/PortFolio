@@ -489,11 +489,15 @@ hr
 		height: 100%;
 		
 	}
+	.photo
+	{
+		height: 100%;
+	}
 	.popup
 	{
 		margin: 20% auto;
 		width: 85%;
-		height: 90%;
+		height: 70%;
 		transform:translate(0%,-13%);
 
 	}
