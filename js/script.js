@@ -86,3 +86,18 @@ d.onclick = function(){
     container.style.transform = "translate("+p*550+"px)";
     container.style.transition = "all 0.5s ease";
 }
+if(container.style.width = "400px")
+{
+    g.onclick = function(){
+    if(p<0)
+        p++;
+    container.style.transform = "translate("+p*400+"px)";
+    container.style.transition = "all 0.5s ease";
+}
+d.onclick = function(){
+    if(p>-nbr+1)
+        p--;
+    container.style.transform = "translate("+p*400+"px)";
+    container.style.transition = "all 0.5s ease";
+}
+}
