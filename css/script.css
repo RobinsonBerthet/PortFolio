@@ -138,11 +138,11 @@ body
 
 .btnMenu::before
 {
-	transform: translateY(-10px);
+	transform: translateY(-20px);
 }
 .btnMenu:after
 {
-	transform: translateY(10px);
+	transform: translateY(20px);
 }
 /*Menu hamburger*/
 hr
@@ -218,10 +218,7 @@ hr
 {
 	text-align: center;
 }
-.paraProjets
-{
-	width: 30%;
-}
+
 .btnPopup
 {
 	background-color: rgb(175, 175, 255);
@@ -230,6 +227,8 @@ hr
 	border-radius: 10px;
 	border: 0px;
 	margin: auto;
+	display: flex;
+	margin-left: 0;
 }
 .btnPopup:hover
 {
@@ -258,8 +257,8 @@ hr
 	border-radius: 15px;
 	box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.3);
 	padding: 1em;
-	transform:translate(0%,-45%);
-	overflow-y: scroll;
+	transform:translate(0%,-37%);
+	overflow: hidden;
 }
 .titreForm
 {
@@ -267,19 +266,16 @@ hr
 }
 .btnClose
 {
-	float: right;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 2em;
 	cursor: pointer;
 
 }
-.imgForm
-{
-	width: 70%;
-	display: block;
-	margin: auto;
-}
 .photo
 {
-	width: 550px;
+	width: 450px;
 	height: 600px;
 	margin: 0;
 	display: inline-block;
@@ -290,7 +286,7 @@ hr
 	position: absolute;
 	width: 50px;
 	cursor: pointer;
-	top: 250px;
+	top: 225px;
 }
 #g
 {
@@ -321,7 +317,7 @@ hr
 #carrousel
 {
 	margin: auto;
-	width: 550px;
+	width: 450px;
 	height: 600px;
 	border: 4px solid white;
 	box-shadow: 0 0 14px rgba(0, 0, 0, 0.3) ;
@@ -330,15 +326,55 @@ hr
 }
 #container
 {
-	width: 550px;
+	width: 450px;
 	height: 600px;
 }
-@media (max-width: 1050px)
+.paraProjetsPendu
+{
+	display: flex;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+}
+.btnPopupPendu
+{
+	background-color: rgb(175, 175, 255);
+	padding: 15px;
+	cursor: pointer;
+	border-radius: 10px;
+	border: 0px;
+	display: flex;
+	margin: auto;
+}
+.btnPopupPendu:hover
+{
+	background-color: white;
+	border: 1px solid blue;
+}
+.imgPendu
+{
+	width: 75%;
+	height: 50%;
+	display: flex;
+	margin: auto;
+}
+.alignProj
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+	margin: auto;
+}
+@media (max-width: 1100px)
 {
 	.descProfil
 	{
 		width: 100%;
 		margin: 0;
+	}
+	.popup
+	{
+		transform:translate(0%,-25%);
 	}
 }
 @media (max-width: 1024px)
@@ -457,8 +493,8 @@ hr
 	{
 		margin: 20% auto;
 		width: 85%;
-		height: 50%;
-		transform:translate(0%,0%);
+		height: 90%;
+		transform:translate(0%,-20%);
 
 	}
 	.titreForm
@@ -475,9 +511,17 @@ hr
 		font-size: 13px;
 		letter-spacing: 0em;
 	}
-
-
-
+	.imgPendu
+	{
+		width: 85%;
+		height: 40%;
+	}
+	.alignProj
+	{
+		display: flex;
+		
+		width: 70%;
+		margin: auto;
 	}
 @media (max-width: 600px)
 {
@@ -504,4 +548,33 @@ hr
 		line-height: 1.5em;
 		letter-spacing: 0em;
 	}
+	.photo
+	{
+		width: 450px;
+		height: 550px;
+		margin: 0;
+		display: inline-block;
+		background-size: cover;
+	}
+	#carrousel
+	{
+		margin: auto;
+		width: 450px;
+		height: 550px;
+		border: 4px solid white;
+		box-shadow: 0 0 14px rgba(0, 0, 0, 0.3) ;
+		position: relative;
+		overflow: hidden;
+	}
+	#container
+	{
+		width: 450px;
+		height: 550px;
+	}
+	.popup
+	{
+		transform:translate(0%,-10%);
+		width: 95%;
+	}
+
 }
