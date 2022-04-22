@@ -273,7 +273,7 @@ hr
 }
 .imgForm
 {
-	width: 65%;
+	width: 70%;
 	display: block;
 	margin: auto;
 }
@@ -402,6 +402,7 @@ hr
 		width: 30%;
 	}
 
+
 	.navbar-links.active.opened
 	{
 		display: none;
@@ -456,8 +457,8 @@ hr
 	{
 		margin: 20% auto;
 		width: 90%;
-		height: 90%;
-		transform:translate(0%,-15%);
+		height: 70%;
+		transform:translate(0%,0%);
 
 	}
 	.titreForm
@@ -469,11 +470,26 @@ hr
 		float: right;
 		cursor: pointer;
 	}
+	.paraForm
+	{
+		font-size: 13px;
+		letter-spacing: 0em;
+	}
 	.imgForm
 	{
 		width: 75%;
 		display: block;
 		margin: auto;
+	}
+		#carrousel
+	{
+		width: 400px;
+		height: 450px;
+	}
+	.photo
+	{
+		width: 400px;
+		height: 450px;
 	}
 
 
