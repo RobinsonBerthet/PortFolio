@@ -218,6 +218,11 @@ hr
 {
 	text-align: center;
 }
+.celluleProj
+{
+	margin: auto;
+	display: flex;
+}
 
 .btnPopup
 {
@@ -271,7 +276,6 @@ hr
 	right: 10px;
 	font-size: 2em;
 	cursor: pointer;
-
 }
 .photo
 {
@@ -346,6 +350,7 @@ hr
 	display: flex;
 	margin: auto;
 }
+
 .btnPopupPendu:hover
 {
 	background-color: white;
@@ -364,6 +369,7 @@ hr
 	vertical-align: middle;
 	width: 30%;
 	margin: auto;
+	height: 100%;
 }
 #ga
 {
