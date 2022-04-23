@@ -258,7 +258,7 @@ hr
 	box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.3);
 	padding: 1em;
 	transform:translate(0%,-37%);
-	overflow: hidden;
+	overflow-x: hidden;
 }
 .titreForm
 {
@@ -364,6 +364,66 @@ hr
 	vertical-align: middle;
 	width: 30%;
 	margin: auto;
+}
+#ga
+{
+	left: 0;
+	opacity: 0.4;
+	transform: rotate(180deg);
+	transition: all 0.3s ease;
+}
+#dr
+{
+	right: 0;
+	opacity: 0.4;
+	transform: rotate(0deg);
+	transition: all 0.3s ease;
+}
+.imgAvtr
+{
+	width: 80%;
+	border: 3px solid black;
+	margin: auto;
+	display: flex;
+}
+.imgLinkedin
+{
+	width: 30px;
+}
+.titreContact
+{
+	text-align: center;
+}
+.formContact
+{
+	text-align: center;
+}
+.nom
+{
+	border: 1px solid black;
+	border-radius: 7px;
+	width: 60%;
+	height: 50px;
+	font-size: 1.2em;
+}
+.email
+{
+	margin: 15px;
+	border: 1px solid black;
+	border-radius: 7px;
+	width: 60%;
+	height: 50px;
+	font-size: 1.2em;
+}
+.message
+{
+	min-width: 60%;
+	width: 60%;
+	max-width: 60%;
+	min-height: 50px;
+	height: 100px;
+	max-height: 250px;
+	font-size: 1.3em;
 }
 @media (max-width: 1100px)
 {
