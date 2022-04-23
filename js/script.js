@@ -148,3 +148,7 @@ function affichageBtn() {
         g.style.visibility="visible";
     }
 }
+
+
+
+
