@@ -553,8 +553,8 @@ hr
 	{
 		margin: 20% auto;
 		width: 85%;
-		height: 50%;
-		padding-bottom: 50px;
+		height: auto;
+		padding-bottom: 30px;
 		transform:translate(0%,0%);
 
 	}
