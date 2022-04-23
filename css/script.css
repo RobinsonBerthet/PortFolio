@@ -546,6 +546,11 @@ hr
 	{
 		width: 100%;
 	}
+	.celluleProj
+	{
+		margin: auto;
+		display: inline-block;
+	}
 	.overlay
 	{
 		position: fixed;
