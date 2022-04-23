@@ -258,7 +258,7 @@ hr
 	box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.3);
 	padding: 1em;
 	transform:translate(0%,-37%);
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .titreForm
 {
