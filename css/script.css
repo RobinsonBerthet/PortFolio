@@ -563,6 +563,26 @@ hr
 {
 	text-align: center;
 }
+.paraCyber
+{
+	margin: auto;
+	width:50%;
+	text-align: justify;
+	padding-bottom: 30px;
+}
+.titreVeillTech
+{
+	text-align: center;	
+}
+.lienDev
+{
+	text-decoration: none;
+	color: black;
+}
+.lienDev:hover
+{
+	color: blue;
+}
 .imgLinkedin
 {
 	width: 30px;
