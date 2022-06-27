@@ -32,9 +32,27 @@ var overlayAvtr = document.getElementById('overlayAvtr');//recup id popup
 var btnCloseAvtr = document.getElementById('btnCloseAvtr');//recup id popup
 var popupAvtr = document.getElementById('popupAvtr');
 
+var btnPopupStage = document.getElementById('btnPopupStage');//recup id popup
+var overlayStage = document.getElementById('overlayStage');//recup id popup
+var btnCloseStage = document.getElementById('btnCloseStage');//recup id popup
+var popupStage = document.getElementById('popupStage');
+
+var btnPopupStage1 = document.getElementById('btnPopupStage1');//recup id popup
+var overlayStage1 = document.getElementById('overlayStage1');//recup id popup
+var btnCloseStage1 = document.getElementById('btnCloseStage1');//recup id popup
+var popupStage1 = document.getElementById('popupStage1');
+
+var btnPopupStage2 = document.getElementById('btnPopupStage2');//recup id popup
+var overlayStage2 = document.getElementById('overlayStage2');//recup id popup
+var btnCloseStage2 = document.getElementById('btnCloseStage2');//recup id popup
+var popupStage2 = document.getElementById('popupStage2');
+
 btnPopup.addEventListener('click', ouvrePopup);
 btnPopupPendu.addEventListener('click', ouvrePopupPendu);
 btnPopupAvtr.addEventListener('click', ouvrePopupAvtr);
+btnPopupStage.addEventListener('click', ouvrePopupStage);
+btnPopupStage1.addEventListener('click', ouvrePopupStage1);
+btnPopupStage2.addEventListener('click', ouvrePopupStage2);
 
 
 function ouvrePopup()
@@ -54,9 +72,28 @@ function ouvrePopupAvtr()
   body.style.overflow = 'hidden';
 }
 
+function ouvrePopupStage()
+{
+  overlayStage.style.display = "block";
+  body.style.overflow = 'hidden';
+}
+function ouvrePopupStage1()
+{
+  overlayStage1.style.display = "block";
+  body.style.overflow = 'hidden';
+}
+function ouvrePopupStage2()
+{
+  overlayStage2.style.display = "block";
+  body.style.overflow = 'hidden';
+}
+
 btnClose.addEventListener('click', fermePopup);
 btnClosePendu.addEventListener('click', fermePopupPendu);
 btnCloseAvtr.addEventListener('click', fermePopupAvtr);
+btnCloseStage.addEventListener('click', fermePopupStage);
+btnCloseStage1.addEventListener('click', fermePopupStage1);
+btnCloseStage2.addEventListener('click', fermePopupStage2);
 
 function keyPress (e) {
     if(e.key == 27) {
@@ -83,6 +120,22 @@ function fermePopupAvtr()
   body.style.overflow = 'visible';
 }
 
+function fermePopupStage()
+{
+  overlayStage.style.display = 'none';
+  body.style.overflow = 'visible';
+}
+function fermePopupStage1()
+{
+  overlayStage1.style.display = 'none';
+  body.style.overflow = 'visible';
+}
+function fermePopupStage2()
+{
+  overlayStage2.style.display = 'none';
+  body.style.overflow = 'visible';
+}
+
 
 
 document.onkeydown = function(evt) {
@@ -96,7 +149,10 @@ document.onkeydown = function(evt) {
     if (isEscape) {
         fermePopup();
         fermePopupPendu(); 
-        fermePopupAvtr();  
+        fermePopupAvtr();
+        fermePopupStage();
+        fermePopupStage1();
+        fermePopupStage2();
     }
 };
 
@@ -146,6 +202,54 @@ function affichageBtn() {
     else
     {
         g.style.visibility="visible";
+    }
+}
+document.body.onload=function()
+{
+    nbr=4;
+    p=0;
+    containerStg = document.getElementById('containerStg');
+    ga = document.getElementById('ga');
+    dr = document.getElementById('dr');
+    containerStg.style.width = (1100*nbr) + "px";
+    for(i=1; i<=nbr; i++)
+    {
+        div = document.createElement("div");
+        div.className="imgStg2";
+        div.style.backgroundImage = "url('img/imgCroiss"+ i +".png')";
+        containerStg.appendChild(div);
+    }
+}
+ga.onclick = function(){
+    if(p<0)
+        p++;
+    containerStg.style.transform = "translate("+p*1100+"px)";
+    containerStg.style.transition = "all 0.5s ease";
+    affichageBtn();
+}
+dr.onclick = function(){
+    if(p>-nbr+1)
+        p--;
+    containerStg.style.transform = "translate("+p*1100+"px)";
+    containerStg.style.transition = "all 0.5s ease";
+    affichageBtn();
+}
+function affichageBtn() {
+    if(p==-nbr+1)
+    {
+        dr.style.visibility="hidden";
+    }
+    else
+    {
+        dr.style.visibility="visible";
+    }
+        if(p==0)
+    {
+        ga.style.visibility="hidden";
+    }
+    else
+    {
+        ga.style.visibility="visible";
     }
 }
 
